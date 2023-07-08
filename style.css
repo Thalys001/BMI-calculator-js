@@ -89,7 +89,7 @@ form input::placeholder {
   margin-top: 1rem;
 }
 
-button {
+form button {
   margin-top: 2rem !important;
   padding: 1rem;
   width: 100%;
@@ -111,6 +111,45 @@ button {
   transition: background 0.3s;
 }
 
-button:hover {
+form button:hover {
   background: var(--bg-button-hover);
+}
+
+/* modal */
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+
+  position: absolute;
+  top: 0.3125rem;
+  right: 0.625rem;
+
+  cursor: pointer;
+
+  transition: transform 0.3s;
+}
+
+.modal button:hover {
+  transform: scale(1.1);
 }
